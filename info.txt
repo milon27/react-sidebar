@@ -1,1 +1,10 @@
 using guide from : https://frontend.blog/build-your-own-flexible-component-library-using-tsdx-typescript-tailwind-css-headless-ui/
+
+
+how to publish
+```
+git add .
+git commit -m 'message'
+npm version major/minor/patch -m 'message'
+npm run pub
+```
