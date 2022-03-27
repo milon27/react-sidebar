@@ -17,7 +17,7 @@ import '../node_modules/@milon27/react-sidebar/dist/react-sidebar.css';
 ```
 2. use the component 
 
->>(React Js Project)
+> (React Js Project)
 
 ```tsx
 import { FiHome } from "react-icons/fi";
@@ -66,7 +66,7 @@ const App=()=>{
 
 ```
 
->>(Next Js Project)
+> (Next Js Project)
 
 ```tsx
 

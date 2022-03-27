@@ -48,6 +48,15 @@
         "email": "immilon27@gmail.com",
         "url": "https://milon27.com"
     },
+    "keywords": [
+        "typescript",
+        "react-sidebar",
+        "tailwind-sidebar",
+        "nextjs-sidebar",
+        "dashboard sidebar",
+        "moderm sidebar",
+        "sidebar"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/milon27/react-sidebar"
