@@ -1,0 +1,9 @@
+/* tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sb-show-main.sb-main-padded {
+	margin: 0;
+	padding: 0;
+}
