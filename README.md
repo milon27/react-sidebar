@@ -74,3 +74,10 @@ const App=()=>{
 // documentation coming soon
 
 ```
+
+> screenshot
+
+![screenshot](desktop1.png)
+![screenshot](desktop2.png)
+![screenshot](mobile1.png)
+![screenshot](mobile2.png)

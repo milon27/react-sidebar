@@ -21,7 +21,7 @@
         "analyze": "size-limit --why",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
-        "publish": "npm publish --access public"
+        "pub": "npm publish --access public"
     },
     "peerDependencies": {
         "react": ">=16",
