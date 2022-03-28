@@ -1,13 +1,11 @@
 import React, { useContext } from 'react'
-// import Link from 'next/link'
-import { useRouter } from 'next/router';
 import { SideBarContext } from './SidebarWrapper';
 
 export const createNextNavLink = (MainNavLink: any, title: string, to: string, icon: React.ReactNode) => {
     return () => {
         const { small } = useContext(SideBarContext);
-        const { pathname } = useRouter();
-        const isActive = pathname === to
+
+        const isActive = window.location.pathname === to
 
         return <>
             <MainNavLink href={to}>
