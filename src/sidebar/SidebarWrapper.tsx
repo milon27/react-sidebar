@@ -1,5 +1,4 @@
 import React, { createContext, useState } from 'react'
-import { iNavItem } from './ReactNavItem';
 
 export const SideBarContext = createContext({} as {
     small: boolean
@@ -7,31 +6,24 @@ export const SideBarContext = createContext({} as {
     logoUrl: string
     userName: string
     userImageUrl: string
-    projectType: ProjectType
-    navItems: Array<iNavItem>
+    navItems: (() => JSX.Element)[]
 });
-
-export enum ProjectType {
-    NEXTJS,
-    REACTJS
-}
 
 interface iSidebarWrapper {
     logoUrl: string
     userName: string
     userImageUrl: string
-    projectType: ProjectType
-    navItems: Array<iNavItem>
+    navItems: (() => JSX.Element)[]
     children: React.ReactNode
 }
 
 /**
  * @description wrape your react router using this sidebarbar wrapper or wrape all component in _App.tsx in next js application
  */
-export default function SidebarWrapper({ logoUrl, userName, userImageUrl, children, projectType, navItems }: iSidebarWrapper) {
+export default function SidebarWrapper({ logoUrl, userName, userImageUrl, children, navItems }: iSidebarWrapper) {
     const [small, setSmall] = useState(false);
     return (
-        <SideBarContext.Provider value={{ small, setSmall, logoUrl, userName, userImageUrl, projectType, navItems }}>
+        <SideBarContext.Provider value={{ small, setSmall, logoUrl, userName, userImageUrl, navItems }}>
             {children}
         </SideBarContext.Provider>
     )

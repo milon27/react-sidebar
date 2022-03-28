@@ -1,9 +1,9 @@
 import React from 'react';
 import { FiHome } from "react-icons/fi";
 import { BiAddToQueue } from "react-icons/bi";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, NavLink } from 'react-router-dom';
 import { Meta } from '@storybook/react';
-import { SidebarWrapper, ProjectType, PageWrapper, iNavItem } from '../src';
+import { SidebarWrapper, PageWrapper, createReactNavLink } from '../src';
 
 const meta: Meta = {
   title: 'Demo'
@@ -12,17 +12,9 @@ const meta: Meta = {
 export default meta;
 
 export const App = () => {
-  const navItems: Array<iNavItem> = [
-    {
-      to: "/",
-      title: "Home",
-      icon: <FiHome />
-    },
-    {
-      to: "/about",
-      title: "About",
-      icon: <BiAddToQueue />
-    }
+  const menus: (() => JSX.Element)[] = [
+    createReactNavLink(NavLink, "Home", "/", <FiHome />),
+    createReactNavLink(NavLink, "About", "/about", <BiAddToQueue />),
   ]
 
   return <>
@@ -30,8 +22,7 @@ export const App = () => {
       logoUrl='https://messmanager.app/img/logo/logo.webp'
       userName='Milon27'
       userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
-      projectType={ProjectType.REACTJS}
-      navItems={navItems}
+      navItems={menus}
     >
       <BrowserRouter>
         <Routes>

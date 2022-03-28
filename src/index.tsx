@@ -1,5 +1,6 @@
 import PageWrapper from "./sidebar/PageWrapper";
-import SidebarWrapper, { ProjectType } from "./sidebar/SidebarWrapper";
-import { iNavItem } from './sidebar/ReactNavItem'
+import SidebarWrapper from "./sidebar/SidebarWrapper";
+import { createReactNavLink } from "./sidebar/createReactNavLink";
+import { createNextNavLink } from './sidebar/createNextLink'
 
-export { SidebarWrapper, ProjectType, PageWrapper, iNavItem }
+export { SidebarWrapper, PageWrapper, createReactNavLink, createNextNavLink }
