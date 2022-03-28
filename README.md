@@ -10,10 +10,10 @@ npm install @milon27/react-sidebar
 
 ### How to use
 
-1. import css in index.js/ts or app.jsx or app.tsx (ignore this if its a tailwind project).
+1. import css in index.js/ts or app.jsx or app.tsx.
 
 ```ts
-import '../node_modules/@milon27/react-sidebar/dist/react-sidebar.css';
+import '@milon27/react-sidebar/dist/react-sidebar.css';
 ```
 2. use the component 
 

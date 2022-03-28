@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CgMenuLeft } from 'react-icons/cg'
 import LeftOffCanvas from './LeftOffCanvas'
 import Navs from './Navs'
@@ -6,12 +6,15 @@ import { SideBarContext } from './SidebarWrapper'
 
 export default function MobileSidebar() {
     const [show, setShow] = useState(false)
-    const { logoUrl, userImageUrl } = useContext(SideBarContext)
+    const { logoUrl, userImageUrl, setSmall } = useContext(SideBarContext)
+    useEffect(() => {
+        setSmall(false)
+    }, [])
     return (
         <>
             <div className='flex sm:hidden px-5 py-2  shadow'>
                 <div className="flex w-full gap-2 justify-start items-center">
-                    <CgMenuLeft className='text-3xl' onClick={() => setShow(true)} />
+                    <CgMenuLeft className='text-3xl cursor-pointer' onClick={() => setShow(true)} />
                     <img src={logoUrl} className="w-9 h-9 max-w-full rounded-full" alt="" />
                 </div>
                 {/* <DiProlog className={` text-5xl  p-1`} /> */}
