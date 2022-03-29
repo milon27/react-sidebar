@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { SideBarContext } from "./SidebarWrapper";
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
-interface iSubMenu {
+export interface iSubMenu {
     title: string
     to: string
     icon: React.ReactNode
@@ -23,7 +23,6 @@ export const createReactNavLink = (MainNavLink: any, title: string, to: string, 
                             return !old
                         })
                     }}
-                    // className={`cursor-pointer my-2 p-2 rounded hover:bg-slate-200 flex gap-2  `}
                     className={`cursor-pointer my-2 p-2 rounded flex gap-2 hover:bg-slate-200 justify-between items-center ${path.split('/')[1] === to.replace('/', '') ? " bg-slate-200" : ""}`}
                 >
                     <div className="flex gap-2 justify-between items-center">
