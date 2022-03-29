@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { CgMenuLeft } from 'react-icons/cg'
 import LeftOffCanvas from './LeftOffCanvas'
 import Navs from './Navs'
@@ -6,10 +6,8 @@ import { SideBarContext } from './SidebarWrapper'
 
 export default function MobileSidebar() {
     const [show, setShow] = useState(false)
-    const { logoUrl, userImageUrl, setSmall } = useContext(SideBarContext)
-    useEffect(() => {
-        setSmall(false)
-    }, [])
+    const { logoUrl, userImageUrl } = useContext(SideBarContext)
+
     return (
         <>
             <div className='flex sm:hidden px-5 py-2  shadow'>

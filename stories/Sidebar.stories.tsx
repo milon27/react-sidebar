@@ -1,9 +1,8 @@
 import React from 'react';
-import { FiHome } from "react-icons/fi";
-import { BiAddToQueue } from "react-icons/bi";
 import { BrowserRouter, Route, Routes, NavLink } from 'react-router-dom';
 import { Meta } from '@storybook/react';
 import { SidebarWrapper, PageWrapper, createReactNavLink } from '../src';
+import { FiBox, FiActivity, FiAirplay, FiAperture } from "react-icons/fi";
 
 const meta: Meta = {
   title: 'Demo'
@@ -24,10 +23,26 @@ const About = () => {
   </PageWrapper>
 }
 
+const SubMenu = () => {
+  return <PageWrapper>
+    SubMenu page
+  </PageWrapper>
+}
+
 export const App = () => {
   const menus: (() => JSX.Element)[] = [
-    createReactNavLink(NavLink, "Home", "/", <FiHome />),
-    createReactNavLink(NavLink, "About", "/about", <BiAddToQueue />),
+    createReactNavLink(NavLink, "Home", "#", <FiBox />, [
+      {
+        icon: <FiActivity />,
+        title: "Submenu1",
+        to: "/sub"
+      }, {
+        icon: <FiAirplay />,
+        title: "Submenu1",
+        to: "/sub2"
+      }
+    ]),
+    createReactNavLink(NavLink, "About", "/about", <FiAperture />),
   ]
 
   return <>
@@ -39,11 +54,9 @@ export const App = () => {
     >
       <BrowserRouter>
         <Routes>
-
           <Route path='*' element={<Home />} />
-
           <Route path='/about' element={<About />} />
-
+          <Route path='/sub' element={<SubMenu />} />
         </Routes>
       </BrowserRouter>
     </SidebarWrapper>

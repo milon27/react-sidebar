@@ -20,15 +20,25 @@ import '@milon27/react-sidebar/dist/react-sidebar.css';
 > (React Js Project)
 
 ```tsx
-import { FiHome } from "react-icons/fi";
-import { BiAddToQueue } from "react-icons/bi";
+import { FiBox, FiActivity, FiAirplay, FiAperture } from "react-icons/fi";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { SidebarWrapper, PageWrapper, createReactNavLink } from '@milon27/react-sidebar';
 
 const App=()=>{
   const navItems: (() => JSX.Element)[] = [
-    createReactNavLink(NavLink, "Home", "/", <FiHome />),
-    createReactNavLink(NavLink, "About", "/about", <BiAddToQueue />),
+    createReactNavLink(NavLink, "Home", "/", <FiBox />),
+    createReactNavLink(NavLink, "Options", "#", <FiActivity />, [
+      {
+        icon: <FiActivity />,
+        title: "Submenu1",
+        to: "/sub"
+      }, {
+        icon: <FiAirplay />,
+        title: "Submenu1",
+        to: "/sub2"
+      }
+    ]),
+    createReactNavLink(NavLink, "About", "/about", <FiAperture />),
   ]
 
     return <>
@@ -40,15 +50,17 @@ const App=()=>{
             >
             <BrowserRouter>
                 <Routes>
+                    <Route path='/' element={<PageWrapper>
+                        home page
+                    </PageWrapper>} />
 
-                <Route path='*' element={<PageWrapper>
-                    home page
-                </PageWrapper>} />
+                    <Route path='/sub' element={<PageWrapper>
+                        sub page
+                    </PageWrapper>} />
 
-                <Route path='/about' element={<PageWrapper>
-                    about page
-                </PageWrapper>} />
-
+                    <Route path='/about' element={<PageWrapper>
+                        about page
+                    </PageWrapper>} />
                 </Routes>
             </BrowserRouter>
         </SidebarWrapper>
