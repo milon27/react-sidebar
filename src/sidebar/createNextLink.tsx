@@ -15,6 +15,9 @@ export const createNextNavLink = (MainNavLink: any, title: string, to: string, i
 
         // if submenus are there ....
         if (subMenus.length > 0) {
+            console.log(path, "=path--------to=", to);
+            console.log(path.split('/')[1], "--------", to.replace('/', ''));
+
             return <>
                 <div
                     onClick={() => {

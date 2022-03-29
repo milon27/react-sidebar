@@ -45,10 +45,6 @@ export const App = () => {
   const menus: (() => JSX.Element)[] = [
     createReactNavLink(NavLink, "Options", "/list", <FiBox />, [
       {
-        icon: <FiList />,
-        title: "List",
-        to: "/list"
-      }, {
         icon: <FiActivity />,
         title: "Create New",
         to: "/list/create"
