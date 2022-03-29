@@ -11,6 +11,19 @@ const meta: Meta = {
 
 export default meta;
 
+
+const Home = () => {
+  return <PageWrapper>
+    home page
+  </PageWrapper>
+}
+
+const About = () => {
+  return <PageWrapper>
+    About page
+  </PageWrapper>
+}
+
 export const App = () => {
   const menus: (() => JSX.Element)[] = [
     createReactNavLink(NavLink, "Home", "/", <FiHome />),
@@ -27,13 +40,9 @@ export const App = () => {
       <BrowserRouter>
         <Routes>
 
-          <Route path='*' element={<PageWrapper>
-            home page
-          </PageWrapper>} />
+          <Route path='*' element={<Home />} />
 
-          <Route path='/about' element={<PageWrapper>
-            about page
-          </PageWrapper>} />
+          <Route path='/about' element={<About />} />
 
         </Routes>
       </BrowserRouter>
