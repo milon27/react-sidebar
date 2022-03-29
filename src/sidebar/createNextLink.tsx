@@ -36,10 +36,11 @@ export const createNextNavLink = (MainNavLink: any, title: string, to: string, i
                     {subMenus.map((item, idx) => {
                         return <MainNavLink
                             key={idx}
-                            href={to}
-                            className={`p-2 rounded flex gap-2 items-center hover:bg-slate-200 ${active === true ? " border border-slate-200" : ""}`}
+                            href={item.to}
                         >
-                            {item.icon}<span className={`${small === true ? "hidden" : "block"} `}>{item.title}</span>
+                            <a className={`p-2 rounded flex gap-2 items-center hover:bg-slate-200 ${active === true ? " border border-slate-200" : ""}`}>
+                                {item.icon}<span className={`${small === true ? "hidden" : "block"} `}>{item.title}</span>
+                            </a>
                         </MainNavLink>
                     })}
                 </div>
