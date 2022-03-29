@@ -29,7 +29,7 @@ export const createNextNavLink = (MainNavLink: any, title: string, to: string, i
                     </div>
                     {open === true ? <FiChevronUp /> : <FiChevronDown />}
                 </div>
-                <div className={`${open === true ? "h-full" : "h-0"} overflow-hidden transition-all bg-slate-100 rounded `}>
+                <div className={`${open === true ? "block" : "hidden"} bg-slate-100 rounded `}>
                     {subMenus.map((item, idx) => {
                         return <MainNavLink
                             key={idx}
