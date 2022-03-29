@@ -5,7 +5,6 @@ import { SideBarContext } from './SidebarWrapper'
 
 export default function PageWrapper({ children }: { children: React.ReactNode }) {
     const { small } = useContext(SideBarContext)
-    console.log('page wrapper...', small);
 
     return (
         <div className="w-full h-full min-h-screen sm:flex bg-gray-50">

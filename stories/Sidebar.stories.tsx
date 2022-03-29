@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, NavLink, Outlet } from 'react-router-dom';
 import { Meta } from '@storybook/react';
 import { SidebarWrapper, PageWrapper, createReactNavLink } from '../src';
-import { FiBox, FiActivity, FiAirplay, FiAperture } from "react-icons/fi";
+import { FiBox, FiActivity, FiAirplay, FiAperture, FiList } from "react-icons/fi";
 
 const meta: Meta = {
   title: 'Demo'
@@ -23,23 +23,39 @@ const About = () => {
   </PageWrapper>
 }
 
+const List = () => {
+  return <PageWrapper>
+    list page
+  </PageWrapper>
+}
+
 const SubMenu = () => {
   return <PageWrapper>
     SubMenu page
   </PageWrapper>
 }
 
+const SubMenu2 = () => {
+  return <PageWrapper>
+    SubMenu Sub Menu2
+  </PageWrapper>
+}
+
 export const App = () => {
   const menus: (() => JSX.Element)[] = [
-    createReactNavLink(NavLink, "Home", "#", <FiBox />, [
+    createReactNavLink(NavLink, "Options", "/list", <FiBox />, [
       {
+        icon: <FiList />,
+        title: "List",
+        to: "/list"
+      }, {
         icon: <FiActivity />,
-        title: "Submenu1",
-        to: "/sub"
+        title: "Create New",
+        to: "/list/create"
       }, {
         icon: <FiAirplay />,
-        title: "Submenu1",
-        to: "/sub2"
+        title: "Edit Now",
+        to: "/list/edit"
       }
     ]),
     createReactNavLink(NavLink, "About", "/about", <FiAperture />),
@@ -56,7 +72,11 @@ export const App = () => {
         <Routes>
           <Route path='*' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/sub' element={<SubMenu />} />
+
+          <Route path='/list' element={<List />} />
+          <Route path='/list/create' element={<SubMenu />} />
+          <Route path='/list/edit' element={<SubMenu2 />} />
+
         </Routes>
       </BrowserRouter>
     </SidebarWrapper>
