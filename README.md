@@ -26,45 +26,48 @@ import { SidebarWrapper, PageWrapper, createReactNavLink } from '@milon27/react-
 
 const App=()=>{
   const navItems: (() => JSX.Element)[] = [
-    createReactNavLink(NavLink, "Home", "/", <FiBox />),
-    createReactNavLink(NavLink, "Options", "#", <FiActivity />, [
+    createReactNavLink(NavLink, "Options", "/list", <FiBox />, [
       {
+        icon: <FiList />,
+        title: "List",
+        to: "/list"
+      }, {
         icon: <FiActivity />,
-        title: "Submenu1",
-        to: "/sub"
+        title: "Create New",
+        to: "/list/create"
       }, {
         icon: <FiAirplay />,
-        title: "Submenu1",
-        to: "/sub2"
+        title: "Edit Now",
+        to: "/list/edit"
       }
     ]),
     createReactNavLink(NavLink, "About", "/about", <FiAperture />),
   ]
 
-    return <>
-        <SidebarWrapper
-            logoUrl='https://messmanager.app/img/logo/logo.webp'
-            userName='Milon27'
-            userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
-            navItems={navItems}
-            >
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<PageWrapper>
-                        home page
-                    </PageWrapper>} />
+  return <>
+      <SidebarWrapper
+          logoUrl='https://messmanager.app/img/logo/logo.webp'
+          userName='Milon27'
+          userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
+          navItems={navItems}
+          >
+          <BrowserRouter>
+              <Routes>
+                  <Route path='/' element={<PageWrapper>
+                      home page
+                  </PageWrapper>} />
 
-                    <Route path='/sub' element={<PageWrapper>
-                        sub page
-                    </PageWrapper>} />
+                  <Route path='/list' element={<ListPage />} />
+                  <Route path='/list/create' element={<CreateNewPage />} />
+                  <Route path='/list/edit' element={<EditPage />} />
 
-                    <Route path='/about' element={<PageWrapper>
-                        about page
-                    </PageWrapper>} />
-                </Routes>
-            </BrowserRouter>
-        </SidebarWrapper>
-    </>
+                  <Route path='/about' element={<PageWrapper>
+                      about page
+                  </PageWrapper>} />
+              </Routes>
+          </BrowserRouter>
+      </SidebarWrapper>
+  </>
 }
 
 ```
