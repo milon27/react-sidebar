@@ -76,8 +76,58 @@ const App=()=>{
 
 ```tsx
 
-// _App.txt file
-// documentation coming soon
+// _App.js file
+import '@milon27/react-sidebar/dist/react-sidebar.css'
+import { SidebarWrapper, createNextNavLink } from '@milon27/react-sidebar'
+import { FiBox, FiAperture } from 'react-icons/fi'
+import NextLink from 'next/link'
+
+function MyApp({ Component, pageProps }) {
+
+  const navItems = [
+    createNextNavLink(NextLink, "Home", "/", <FiBox />),
+    createNextNavLink(NextLink, "Options", "/list", <FiBox />, [
+      {
+        icon: <FiBox />,
+        title: "List",
+        to: "/list"
+      }, {
+        icon: <FiBox />,
+        title: "Create Now",
+        to: "/list/create"
+      },
+    ]),
+    createNextNavLink(NextLink, "About", "/about", <FiAperture />),
+  ]
+
+  return <SidebarWrapper
+    logoUrl='https://messmanager.app/img/logo/logo.webp'
+    userName='Milon27'
+    userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
+    navItems={navItems}
+  >
+    <Component {...pageProps} />
+  </SidebarWrapper>
+}
+
+export default MyApp
+
+```
+
+> in other next js page
+
+```jsx
+// page/about.js
+import { PageWrapper } from '@milon27/react-sidebar'
+import React from 'react'
+
+export default function about() {
+    return (
+        <PageWrapper>
+            <h1>about page</h1>
+        </PageWrapper>
+    )
+}
 
 ```
 

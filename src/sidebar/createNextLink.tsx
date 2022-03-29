@@ -15,9 +15,6 @@ export const createNextNavLink = (MainNavLink: any, title: string, to: string, i
 
         // if submenus are there ....
         if (subMenus.length > 0) {
-            console.log(path, "=path--------to=", to);
-            console.log(path.split('/')[1], "--------", to.replace('/', ''));
-
             return <>
                 <div
                     onClick={() => {
@@ -38,7 +35,7 @@ export const createNextNavLink = (MainNavLink: any, title: string, to: string, i
                             key={idx}
                             href={item.to}
                         >
-                            <a className={`p-2 rounded flex gap-2 items-center hover:bg-slate-200 ${path === to ? " border border-slate-200" : ""}`}>
+                            <a className={`p-2 rounded flex gap-2 items-center hover:bg-slate-200 ${path === item.to ? " border border-slate-200" : ""}`}>
                                 {item.icon}<span className={`${small === true ? "hidden" : "block"} `}>{item.title}</span>
                             </a>
                         </MainNavLink>
