@@ -12,7 +12,7 @@ export const createReactNavLink = (MainNavLink: any, title: string, to: string, 
     return () => {
         const { small } = useContext(SideBarContext);
         const [open, setOpen] = useState(false)
-        const path = window.location.pathname
+        const path = typeof window !== "undefined" ? window.location.pathname : ""
 
         // if submenus are there ....
         if (subMenus.length > 0) {

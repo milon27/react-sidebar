@@ -5,7 +5,7 @@ export const createNextNavLink = (MainNavLink: any, title: string, to: string, i
     return () => {
         const { small } = useContext(SideBarContext);
 
-        const isActive = window.location.pathname === to
+        const isActive = typeof window !== "undefined" && window.location.pathname === to
 
         return <>
             <MainNavLink href={to}>
