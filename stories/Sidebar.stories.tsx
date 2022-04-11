@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, NavLink, Outlet } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, NavLink } from 'react-router-dom';
 import { Meta } from '@storybook/react';
 import { SidebarWrapper, PageWrapper, createReactNavLink } from '../src';
-import { FiBox, FiActivity, FiAirplay, FiAperture, FiList } from "react-icons/fi";
+import { FiBox, FiActivity, FiAirplay, FiAperture, FiBookOpen, FiCast, FiClipboard, FiCodepen } from "react-icons/fi";
 
 const meta: Meta = {
   title: 'Demo'
@@ -43,6 +43,7 @@ const SubMenu2 = () => {
 
 export const App = () => {
   const menus: (() => JSX.Element)[] = [
+    createReactNavLink(NavLink, "About", "/about", <FiCodepen />),
     createReactNavLink(NavLink, "Options", "/list", <FiBox />, [
       {
         icon: <FiActivity />,
@@ -54,7 +55,9 @@ export const App = () => {
         to: "/list/edit"
       }
     ]),
-    createReactNavLink(NavLink, "About", "/about", <FiAperture />),
+    createReactNavLink(NavLink, "Side For", "/about1", <FiBookOpen />),
+    createReactNavLink(NavLink, "Products", "/about2", <FiClipboard />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
   ]
 
   return <>
@@ -63,6 +66,7 @@ export const App = () => {
       userName='Milon27'
       userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
       navItems={menus}
+      onLogOut={() => { }}
     >
       <BrowserRouter>
         <Routes>

@@ -25,8 +25,13 @@ interface iSidebarWrapper {
 export default function SidebarWrapper({ logoUrl, userName, userImageUrl, children, navItems, onLogOut }: iSidebarWrapper) {
     const [small, setSmall] = useState(false);
 
+
     return (
-        <SideBarContext.Provider value={{ small, setSmall, logoUrl, userName, userImageUrl, navItems, onLogOut }}>
+        <SideBarContext.Provider value={{
+            small, setSmall, logoUrl, userName, userImageUrl,
+            navItems,
+            onLogOut
+        }}>
             {children}
         </SideBarContext.Provider>
     )
