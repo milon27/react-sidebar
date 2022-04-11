@@ -6,7 +6,7 @@ import Navs from './Navs';
 
 
 export default function Sidebar() {
-    const { small, setSmall, logoUrl, userName, userImageUrl } = useContext(SideBarContext)
+    const { small, setSmall, logoUrl, userName, userImageUrl, onLogOut } = useContext(SideBarContext)
     return (
         // w-[65px] md:w-[240px]
         <div className={`${small === true ? "sm:w-[65px]" : "sm:w-[240px]"} transition-all hidden sm:block bg-white shadow p-4 fixed overflow-x-hidden h-full top-0 left-0`}>
@@ -29,7 +29,7 @@ export default function Sidebar() {
 
                         <span className={`${small === true ? "hidden" : "block"} `}>{userName}</span>
 
-                        <AiOutlineLogout className={`${small === true ? "hidden" : "block"} text-3xl rounded bg-slate-200 p-2 cursor-pointer`} />
+                        <AiOutlineLogout onClick={onLogOut} className={`${small === true ? "hidden" : "block"} text-3xl rounded bg-slate-200 p-2 cursor-pointer`} />
 
                     </div>
                     {small === true && <IoIosArrowForward onClick={() => { setSmall(old => !old) }} className='my-2 text-3xl rounded bg-slate-200 p-2 cursor-pointer' />}
