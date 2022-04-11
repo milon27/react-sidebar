@@ -26,7 +26,7 @@ import { SidebarWrapper, PageWrapper, createReactNavLink } from '@milon27/react-
 
 const App=()=>{
   const navItems: (() => JSX.Element)[] = [
-    createReactNavLink(NavLink, "Options", "/list", <FiBox />, [
+    createReactNavLink(NavLink, "Options", "#", <FiBox />, [
       {
         icon: <FiList />,
         title: "List",
@@ -34,11 +34,11 @@ const App=()=>{
       }, {
         icon: <FiActivity />,
         title: "Create New",
-        to: "/list/create"
+        to: "/create"
       }, {
         icon: <FiAirplay />,
         title: "Edit Now",
-        to: "/list/edit"
+        to: "/edit"
       }
     ]),
     createReactNavLink(NavLink, "About", "/about", <FiAperture />),
@@ -50,6 +50,7 @@ const App=()=>{
           userName='Milon27'
           userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
           navItems={navItems}
+          onLogOut={() => { }}
           >
           <BrowserRouter>
               <Routes>
@@ -58,8 +59,8 @@ const App=()=>{
                   </PageWrapper>} />
 
                   <Route path='/list' element={<ListPage />} />
-                  <Route path='/list/create' element={<CreateNewPage />} />
-                  <Route path='/list/edit' element={<EditPage />} />
+                  <Route path='/create' element={<CreateNewPage />} />
+                  <Route path='/edit' element={<EditPage />} />
 
                   <Route path='/about' element={<PageWrapper>
                       about page
@@ -86,7 +87,7 @@ function MyApp({ Component, pageProps }) {
 
   const navItems = [
     createNextNavLink(NextLink, "Home", "/", <FiBox />),
-    createNextNavLink(NextLink, "Options", "/list", <FiBox />, [
+    createNextNavLink(NextLink, "Options", "#", <FiBox />, [
       {
         icon: <FiBox />,
         title: "List",
@@ -94,7 +95,7 @@ function MyApp({ Component, pageProps }) {
       }, {
         icon: <FiBox />,
         title: "Create Now",
-        to: "/list/create"
+        to: "/create"
       },
     ]),
     createNextNavLink(NextLink, "About", "/about", <FiAperture />),
@@ -105,6 +106,7 @@ function MyApp({ Component, pageProps }) {
     userName='Milon27'
     userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
     navItems={navItems}
+    onLogOut={() => { }}
   >
     <Component {...pageProps} />
   </SidebarWrapper>

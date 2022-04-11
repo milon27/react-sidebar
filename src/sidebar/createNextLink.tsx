@@ -10,24 +10,12 @@ export const createNextNavLink = (MainNavLink: any, title: string, to: string, i
         const { small } = useContext(SideBarContext);
         const [path, setPath] = useState('')
         const [open, setOpen] = useState(false)
-        const [subActive, setSubActive] = useState(false)
-
-        function getActiveClass(active: boolean) {
-            if (active === true) {
-                setSubActive(true)
-                return ` border border-slate-200`
-            }
-            else {
-                return ''
-            }
-        }
 
         useEffect(() => {
             setPath(window.location.pathname)
         }, [])
 
         // if submenus are there ....
-        //path.split('/')[1] === to.replace('/', '')
         if (subMenus.length > 0) {
             return <>
                 <div
@@ -36,7 +24,7 @@ export const createNextNavLink = (MainNavLink: any, title: string, to: string, i
                             return !old
                         })
                     }}
-                    className={`cursor-pointer my-2 ${small ? 'p-2' : 'px-2.5 py-2.5'} ${Define.ROUND} flex gap-2 ${Define.H_BG} justify-between items-center ${subActive === true ? `${Define.BG} font-semibold` : ""}`}
+                    className={`cursor-pointer my-2 ${small ? 'p-2' : 'px-2.5 py-2.5'} ${Define.ROUND} flex gap-2 ${Define.H_BG} justify-between items-center ${subMenus.map(item => item.to).includes(path) ? `${Define.BG} font-semibold` : ""}`}
                 >
                     <div className="flex gap-2 justify-between items-center">
                         <span className="my_icon">{icon}</span><span className={`${small === true ? "hidden" : "block"} text-base `}>{title}</span>
@@ -49,7 +37,7 @@ export const createNextNavLink = (MainNavLink: any, title: string, to: string, i
                             key={idx}
                             href={item.to}
                         >
-                            <a className={`${small ? 'p-2' : 'px-2.5 py-2.5'} ${Define.ROUND} flex gap-2 items-center ${Define.H_BG} ${getActiveClass(path === item.to)}`}>
+                            <a className={`${small ? 'p-2' : 'px-2.5 py-2.5'} ${Define.ROUND} flex gap-2 items-center ${Define.H_BG} ${path === item.to ? ' border border-slate-200' : ''}`}>
                                 <span className="my_icon">{item.icon}</span> <span className={`${small === true ? "hidden" : "block"} text-base `}>{item.title}</span>
                             </a>
                         </MainNavLink>
