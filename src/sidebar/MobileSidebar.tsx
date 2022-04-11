@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { CgMenuLeft } from 'react-icons/cg'
+import Footer from './Footer'
 import LeftOffCanvas from './LeftOffCanvas'
 import Navs from './Navs'
 import { SideBarContext } from './SidebarWrapper'
@@ -22,6 +23,7 @@ export default function MobileSidebar() {
             </div>
             <LeftOffCanvas title={'Options'} show={show} setShow={setShow} >
                 <Navs />
+                <Footer />
             </LeftOffCanvas>
         </>
     )
