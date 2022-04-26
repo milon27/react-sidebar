@@ -5,7 +5,7 @@ compitable with react js and next js.
 ## Installation Commands
 
 ```bash
-npm install @milon27/react-sidebar
+npm install react-icons @milon27/react-sidebar
 ```
 
 ### How to use

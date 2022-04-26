@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { SideBarContext } from "./SidebarWrapper";
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import Define from "../Define";
@@ -13,7 +13,12 @@ export const createReactNavLink = (MainNavLink: any, title: string, to: string, 
     return () => {
         const { small } = useContext(SideBarContext);
         const [open, setOpen] = useState(false)
-        const [subActive, setSubActive] = useState(false)
+        // const [subActive, setSubActive] = useState(false)
+        const [path, setPath] = useState('')
+
+        useEffect(() => {
+            setPath(window.location.pathname)
+        }, [])
 
         // const path = typeof window !== "undefined" ? window.location.pathname : ""
 
@@ -27,22 +32,22 @@ export const createReactNavLink = (MainNavLink: any, title: string, to: string, 
                             return !old
                         })
                     }}
-                    className={`cursor-pointer my-2 ${small ? 'p-2' : 'px-2.5 py-2.5'} ${Define.ROUND} flex gap-2 ${Define.H_BG} justify-between items-center ${subActive === true ? `${Define.BG} font-semibold` : ""}`}
+                    className={`cursor-pointer my-2 ${small ? 'p-2' : 'px-2.5 py-2.5'} ${Define.ROUND} flex gap-2 ${Define.H_BG} justify-between items-center ${subMenus.map(item => item.to).includes(path) ? `${Define.BG} font-semibold` : ""}`}
                 >
                     <div className="flex gap-2 justify-between items-center">
                         <span className="my_icon"> {icon}</span><span className={`${small === true ? "hidden" : "block"} `}>{title}</span>
                     </div>
                     {open === true ? <FiChevronUp /> : <FiChevronDown />}
                 </div>
-                <div className={`${open === true ? "block" : "hidden"} ${Define.ROUND} `}>
+                <div className={`${open === true ? "block" : "hidden"} ${Define.ROUND} pl-1`}>
                     {subMenus.map((item, idx) => {
                         return <MainNavLink
                             key={idx}
                             to={item.to}
                             className={(navinfo: any) => {
-                                if (navinfo.isActive === true) {
-                                    setSubActive(true)
-                                }
+                                // if (navinfo.isActive === true) {
+                                //     setSubActive(true)
+                                // }
                                 return `${small ? 'p-2' : 'px-2.5 py-2.5'} ${Define.ROUND} flex gap-2 items-center ${Define.H_BG} ${navinfo.isActive === true ? " border border-slate-200" : ""}`
                             }}
                         >
