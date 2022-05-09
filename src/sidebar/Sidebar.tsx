@@ -6,19 +6,19 @@ import Footer from './Footer';
 
 
 export default function Sidebar() {
-    const { small, setSmall, logoUrl } = useContext(SideBarContext)
+    const { title, small, setSmall, logoUrl } = useContext(SideBarContext)
     return (
         // w-[65px] md:w-[240px]
-        <div className={`${small === true ? "sm:w-[65px]" : "sm:w-[240px]"} transition-all hidden sm:block bg-white shadow p-4 fixed overflow-x-hidden h-full top-0 left-0`}>
-            <div className="flex gap-2 items-center">
-                <img src={logoUrl} className="w-10 max-w-full" alt="" />
-                {/* <p className='font-bold text-2xl hidden md:block'>metasar</p> */}
-                <div className={`w-full justify-end ${small === true ? "hidden" : "flex"}  `}>
-                    <IoIosArrowBack onClick={() => { setSmall(old => !old) }} className='text-3xl rounded bg-slate-200 p-2 cursor-pointer' />
+        <div className={`${small === true ? "sm:rs-w-[65px]" : "sm:rs-w-[240px]"} rs-transition-all rs-hidden sm:rs-block rs-bg-white rs-shadow rs-p-4 rs-fixed rs-overflow-x-hidden rs-h-full rs-top-0 rs-left-0`}>
+            <div className="rs-flex rs-gap-2 rs-items-center">
+                <img src={logoUrl} className="rs-w-10 rs-max-w-full" alt="" />
+                {title && !small && <p className='rs-font-bold rs-text-2xl rs-hidden md:rs-block'>{title}</p>}
+                <div className={`rs-w-full rs-justify-end ${small === true ? "rs-hidden" : "rs-flex"}  `}>
+                    <IoIosArrowBack onClick={() => { setSmall(old => !old) }} className='rs-text-3xl rs-rounded rs-bg-slate-200 rs-p-2 rs-cursor-pointer' />
                 </div>
             </div>
-            <hr className='my-2' />
-            <div className='flex flex-col '>
+            <hr className='rs-my-2' />
+            <div className='rs-flex rs-flex-col '>
                 <Navs />
                 <Footer />
             </div>

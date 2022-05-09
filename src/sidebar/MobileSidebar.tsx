@@ -7,21 +7,21 @@ import { SideBarContext } from './SidebarWrapper'
 
 export default function MobileSidebar() {
     const [show, setShow] = useState(false)
-    const { logoUrl, userImageUrl } = useContext(SideBarContext)
+    const { title, logoUrl, userImageUrl } = useContext(SideBarContext)
 
     return (
         <>
-            <div className='flex sm:hidden px-5 py-2  shadow'>
-                <div className="flex w-full gap-2 justify-start items-center">
-                    <CgMenuLeft className='text-3xl cursor-pointer' onClick={() => setShow(true)} />
-                    <img src={logoUrl} className="w-9 h-9 max-w-full rounded-full" alt="" />
+            <div className='rs-flex sm:rs-hidden rs-px-5 rs-py-2  rs-shadow'>
+                <div className="rs-flex rs-w-full rs-gap-2 rs-justify-start rs-items-center">
+                    <CgMenuLeft className='rs-text-3xl rs-cursor-pointer' onClick={() => setShow(true)} />
+                    <img src={logoUrl} className="rs-w-9 rs-h-9 rs-max-w-full rs-rounded-full" alt="" />
                 </div>
                 {/* <DiProlog className={` text-5xl  p-1`} /> */}
-                <div className='w-9 h-9' >
-                    <img src={userImageUrl} className="rounded-full shadow" alt="" />
+                <div className='rs-w-9 rs-h-9' >
+                    <img src={userImageUrl} className="rs-rounded-full rs-shadow" alt="" />
                 </div>
             </div>
-            <LeftOffCanvas title={'Options'} show={show} setShow={setShow} >
+            <LeftOffCanvas title={title || 'Options'} show={show} setShow={setShow} >
                 <Navs />
                 <Footer />
             </LeftOffCanvas>

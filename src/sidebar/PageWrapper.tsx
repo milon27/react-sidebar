@@ -7,12 +7,12 @@ export default function PageWrapper({ children }: { children: React.ReactNode })
     const { small } = useContext(SideBarContext)
 
     return (
-        <div className="w-full h-full min-h-screen sm:flex bg-gray-50">
+        <div className="rs-w-full rs-h-full rs-min-h-screen sm:rs-flex rs-bg-gray-50">
             {/* sidebar */}
             <Sidebar />
             <MobileSidebar />
             {/* content */}
-            <div className={`transition-all w-full p-5 ${small === true ? "sm:ml-[65px]" : "sm:ml-[240px]"} `}>
+            <div className={`rs-transition-all rs-w-full rs-p-5 ${small === true ? "sm:rs-ml-[65px]" : "sm:rs-ml-[240px]"} `}>
                 {children}
             </div>
         </div>

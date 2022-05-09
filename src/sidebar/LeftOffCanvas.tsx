@@ -9,8 +9,8 @@ interface iLeftOffCanvas {
 }
 
 export default function LeftOffCanvas({ show, title, setShow, children }: iLeftOffCanvas) {
-    const show_class = 'offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white  bg-clip-padding  outline-none transition translate-x-0 duration-300 ease-in-out text-gray-700 top-0 left-0 border-none w-64 md:w-80 shadow-xl z-[1200]'
-    const hide_class = 'offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white  bg-clip-padding  outline-none transition -translate-x-full duration-300 ease-in-out text-gray-700 top-0 left-0 border-none w-64 md:w-80 shadow-xl z-[1200]'
+    const show_class = 'rs-offcanvas rs-offcanvas-end rs-fixed rs-bottom-0 rs-flex rs-flex-col rs-max-w-full rs-bg-white  rs-bg-clip-padding  rs-outline-none rs-transition rs-translate-x-0 rs-duration-300 rs-ease-in-out rs-text-gray-700 rs-top-0 rs-left-0 rs-border-none rs-w-64 md:rs-w-80 rs-shadow-xl rs-z-[1200]'
+    const hide_class = 'rs-offcanvas rs-offcanvas-end rs-fixed rs-bottom-0 rs-flex rs-flex-col rs-max-w-full rs-bg-white  rs-bg-clip-padding  rs-outline-none rs-transition -rs-translate-x-full rs-duration-300 rs-ease-in-out rs-text-gray-700 rs-top-0 rs-left-0 rs-border-none rs-w-64 md:rs-w-80 rs-shadow-xl rs-z-[1200]'
 
     const hide = () => {
         setShow(false)
@@ -19,17 +19,17 @@ export default function LeftOffCanvas({ show, title, setShow, children }: iLeftO
     return (
         <>
             <div className={show === true ? show_class : hide_class} >
-                <div className="offcanvas-header flex items-center justify-between p-4">
-                    <h5 className="offcanvas-title mb-0 leading-normal font-semibold uppercase" >{title}</h5>
-                    <AiOutlineCloseCircle onClick={hide} className='text-2xl cursor-pointer' />
+                <div className="rs-offcanvas-header rs-flex rs-items-center rs-justify-between rs-p-4">
+                    <h5 className="rs-offcanvas-title rs-mb-0 rs-leading-normal rs-font-semibold rs-uppercase" >{title}</h5>
+                    <AiOutlineCloseCircle onClick={hide} className='rs-text-2xl rs-cursor-pointer' />
                 </div>
                 <hr />
-                <div className="offcanvas-body flex-grow p-4 overflow-y-auto">
+                <div className="rs-offcanvas-body rs-flex-grow rs-p-4 rs-overflow-y-auto">
                     {children}
                 </div>
             </div>
 
-            <div className={show === true ? "offcanvas-backdrop show" : ""} onClick={hide}></div>
+            <div className={show === true ? "offcanvas-backdrop rs-show" : ""} onClick={hide}></div>
         </>
     )
 }

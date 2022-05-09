@@ -1,7 +1,7 @@
 const Define = {
-    BG: 'bg-slate-200',
-    H_BG: 'hover:bg-slate-200',
-    ROUND: 'rounded-md'
+    BG: 'rs-bg-slate-200',
+    H_BG: 'hover:rs-bg-slate-200',
+    ROUND: 'rs-rounded-md'
 }
 
 export default Define

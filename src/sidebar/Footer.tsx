@@ -6,19 +6,19 @@ import { SideBarContext } from './SidebarWrapper'
 export default function Footer() {
     const { small, setSmall, userName, userImageUrl, onLogOut } = useContext(SideBarContext)
     return (
-        <div className='user w-full overflow-x-hidden absolute bottom-4 left-0 px-4'>
-            <div className='flex gap-2 justify-between items-center'>
+        <div className='user rs-w-full rs-overflow-x-hidden rs-absolute rs-bottom-4 rs-left-0 rs-px-4'>
+            <div className='rs-flex rs-gap-2 rs-justify-between rs-items-center'>
 
-                <div className={`w-8 h-8`} >
-                    <img src={userImageUrl} className="rounded-full shadow" alt="" />
+                <div className={`rs-w-8 rs-h-8`} >
+                    <img src={userImageUrl} className="rs-rounded-full rs-shadow" alt="" />
                 </div>
 
-                <span className={`${small === true ? "hidden" : "block"} `}>{userName}</span>
+                <span className={`${small === true ? "rs-hidden" : "rs-block"} `}>{userName}</span>
 
-                <AiOutlineLogout onClick={onLogOut} className={`${small === true ? "hidden" : "block"} text-3xl rounded bg-slate-200 p-2 cursor-pointer`} />
+                <AiOutlineLogout onClick={onLogOut} className={`${small === true ? "rs-hidden" : "rs-block"} rs-text-3xl rs-rounded rs-bg-slate-200 rs-p-2 rs-cursor-pointer`} />
 
             </div>
-            {small === true && <IoIosArrowForward onClick={() => { setSmall(old => !old) }} className='my-2 text-3xl rounded bg-slate-200 p-2 cursor-pointer' />}
+            {small === true && <IoIosArrowForward onClick={() => { setSmall(old => !old) }} className='rs-my-2 rs-text-3xl rs-rounded rs-bg-slate-200 rs-p-2 rs-cursor-pointer' />}
 
         </div>
     )

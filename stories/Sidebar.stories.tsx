@@ -62,6 +62,7 @@ export const App = () => {
 
   return <>
     <SidebarWrapper
+      title='App'
       logoUrl='https://messmanager.app/img/logo/logo.webp'
       userName='Milon27'
       userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
