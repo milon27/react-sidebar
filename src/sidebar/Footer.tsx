@@ -4,12 +4,12 @@ import { IoIosArrowForward } from 'react-icons/io'
 import { SideBarContext } from './SidebarWrapper'
 
 export default function Footer() {
-    const { small, setSmall, userName, userImageUrl, onLogOut } = useContext(SideBarContext)
+    const { small, setSmall, userName, userImageUrl, onLogOut, onProfileImgClick } = useContext(SideBarContext)
     return (
         <div className='user rs-w-full rs-overflow-x-hidden rs-absolute rs-bottom-4 rs-left-0 rs-px-4'>
             <div className='rs-flex rs-gap-2 rs-justify-between rs-items-center'>
 
-                <div className={`rs-w-8 rs-h-8`} >
+                <div className={`rs-w-8 rs-h-8 rs-cursor-pointer`} onClick={onProfileImgClick}>
                     <img src={userImageUrl} className="rs-rounded-full rs-shadow" alt="" />
                 </div>
 
