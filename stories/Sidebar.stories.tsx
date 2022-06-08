@@ -36,7 +36,7 @@ const SubMenu = () => {
 }
 
 const SubMenu2 = () => {
-  return <PageWrapper>
+  return <PageWrapper className='rs-bg-gray-100'>
     SubMenu Sub Menu2
   </PageWrapper>
 }
@@ -68,6 +68,8 @@ export const App = () => {
       userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
       navItems={menus}
       onLogOut={() => { }}
+      onLogoClick={() => { }}
+      onProfileImgClick={() => { }}
     >
       <BrowserRouter>
         <Routes>

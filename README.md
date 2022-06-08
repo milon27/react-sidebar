@@ -51,10 +51,12 @@ const App=()=>{
           userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
           navItems={navItems}
           onLogOut={() => { }}
+          onLogoClick={() => { }}
+          onProfileImgClick={() => { }}
           >
           <BrowserRouter>
               <Routes>
-                  <Route path='/' element={<PageWrapper>
+                  <Route path='/' element={<PageWrapper className="bg-green">
                       home page
                   </PageWrapper>} />
 
@@ -107,6 +109,8 @@ function MyApp({ Component, pageProps }) {
     userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
     navItems={navItems}
     onLogOut={() => { }}
+    onLogoClick={() => { }}
+    onProfileImgClick={() => { }}
   >
     <Component {...pageProps} />
   </SidebarWrapper>
@@ -125,7 +129,7 @@ import React from 'react'
 
 export default function about() {
     return (
-        <PageWrapper>
+        <PageWrapper className="bg-green">
             <h1>about page</h1>
         </PageWrapper>
     )
