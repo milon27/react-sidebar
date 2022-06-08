@@ -50,6 +50,7 @@ const App=()=>{
           userName='Milon27'
           userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
           navItems={navItems}
+          activeStyle="outline" //fill , outline
           onLogOut={() => { }}
           onLogoClick={() => { }}
           onProfileImgClick={() => { }}
@@ -108,6 +109,7 @@ function MyApp({ Component, pageProps }) {
     userName='Milon27'
     userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
     navItems={navItems}
+    activeStyle="outline" //fill , outline
     onLogOut={() => { }}
     onLogoClick={() => { }}
     onProfileImgClick={() => { }}
