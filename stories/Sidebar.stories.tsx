@@ -67,6 +67,7 @@ export const App = () => {
       userName='Milon27'
       userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
       navItems={menus}
+      activeStyle="outline"
       onLogOut={() => { }}
       onLogoClick={() => { }}
       onProfileImgClick={() => { }}
