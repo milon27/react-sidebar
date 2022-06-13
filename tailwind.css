@@ -8,6 +8,19 @@
 	padding: 0;
 }
 
-.my_icon svg {
+.rs_my_icon svg {
 	font-size: 18px;
+}
+
+/* hide scroll bar */
+.rs_scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.rs_scrollbar {
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
 }

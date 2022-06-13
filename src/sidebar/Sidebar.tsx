@@ -9,7 +9,7 @@ export default function Sidebar() {
     const { title, small, setSmall, logoUrl, onLogoClick } = useContext(SideBarContext)
     return (
         // w-[65px] md:w-[240px]
-        <div className={`${small === true ? "sm:rs-w-[65px]" : "sm:rs-w-[240px]"} rs-transition-all rs-hidden sm:rs-block rs-bg-white rs-shadow rs-p-4 rs-fixed rs-overflow-x-hidden rs-h-full rs-top-0 rs-left-0`}>
+        <div className={`rs_main_sidebar rs_scrollbar ${small === true ? "sm:rs-w-[65px]" : "sm:rs-w-[240px]"} rs-transition-all rs-hidden sm:rs-block rs-bg-white rs-shadow rs-p-4 rs-fixed rs-overflow-x-hidden rs-h-full rs-top-0 rs-left-0`}>
             <div className="rs-flex rs-gap-2 rs-items-center">
                 <img src={logoUrl} className="rs-w-10 rs-max-w-full rs-cursor-pointer" alt="" onClick={onLogoClick} />
                 {title && !small && <p className='rs-font-bold rs-text-2xl rs-hidden md:rs-block'>{title}</p>}

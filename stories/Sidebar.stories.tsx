@@ -58,6 +58,23 @@ export const App = () => {
     createReactNavLink(NavLink, "Side For", "/about1", <FiBookOpen />),
     createReactNavLink(NavLink, "Products", "/about2", <FiClipboard />),
     createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders", "/about3", <FiAperture />),
+    createReactNavLink(NavLink, "Orders Last", "/about4", <FiCast />),
   ]
 
   return <>

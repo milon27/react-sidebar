@@ -6,7 +6,7 @@ import { SideBarContext } from './SidebarWrapper'
 export default function Footer() {
     const { small, setSmall, userName, userImageUrl, onLogOut, onProfileImgClick } = useContext(SideBarContext)
     return (
-        <div className='user rs-w-full rs-overflow-x-hidden rs-absolute rs-bottom-4 rs-left-0 rs-px-4'>
+        <div className={`rs_user rs-w-full ${small === true ? "sm:rs-w-[65px]" : "sm:rs-w-[240px]"} rs-overflow-x-hidden rs-fixed rs-bottom-0 rs-left-0 rs-px-4 rs-py-3 rs-bg-white`}>
             <div className='rs-flex rs-gap-2 rs-justify-between rs-items-center'>
 
                 <div className={`rs-w-8 rs-h-8 rs-cursor-pointer`} onClick={onProfileImgClick}>
