@@ -10,7 +10,7 @@ export default function Footer() {
             <div className='rs-flex rs-gap-2 rs-justify-between rs-items-center'>
 
                 <div className={`rs-w-8 rs-h-8 rs-cursor-pointer`} onClick={onProfileImgClick}>
-                    <img src={userImageUrl} className="rs-rounded-full rs-shadow" alt="" />
+                    <img src={userImageUrl} className="rs-rounded-full rs-shadow rs-w-8 rs-h-8 rs-overflow-hidden rs-object-cover" alt="" />
                 </div>
 
                 <span className={`${small === true ? "rs-hidden" : "rs-block"} `}>{userName}</span>

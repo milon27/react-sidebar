@@ -18,7 +18,7 @@ export default function MobileSidebar() {
                 </div>
                 {/* <DiProlog className={` text-5xl  p-1`} /> */}
                 <div className='rs-w-9 rs-h-9 rs-cursor-pointer' onClick={onProfileImgClick}>
-                    <img src={userImageUrl} className="rs-rounded-full rs-shadow" alt="" />
+                    <img src={userImageUrl} className="rs-rounded-full rs-shadow rs-w-8 rs-h-8 rs-overflow-hidden rs-object-cover" alt="" />
                 </div>
             </div>
             <LeftOffCanvas title={title || 'Options'} show={show} setShow={setShow} >
