@@ -81,10 +81,14 @@ export const App = () => {
     <SidebarWrapper
       title='App'
       logoUrl='https://messmanager.app/img/logo/logo.webp'
-      userName='Milon27'
+      userName={<p className='rs-text-center'>Milon <br /><small>admin</small></p>}
       userImageUrl='https://avatars.githubusercontent.com/u/44096479?v=4'
       navItems={menus}
       activeStyle="outline"
+      mobileHeaderContent={<>
+        <div className='rs-bg-red-500 rs-w-9 rs-h-9 rs-cursor-pointer rs-rounded-full' />
+        <div className='rs-bg-red-500 rs-w-9 rs-h-9 rs-cursor-pointer rs-rounded-full' />
+      </>}
       onLogOut={() => { }}
       onLogoClick={() => { }}
       onProfileImgClick={() => { }}

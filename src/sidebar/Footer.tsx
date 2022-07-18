@@ -13,7 +13,7 @@ export default function Footer() {
                     <img src={userImageUrl} className="rs-rounded-full rs-shadow rs-w-8 rs-h-8 rs-overflow-hidden rs-object-cover" alt="" />
                 </div>
 
-                <span className={`${small === true ? "rs-hidden" : "rs-block"} `}>{userName}</span>
+                <div className={`${small === true ? "rs-hidden" : "rs-block"} rs-whitespace-pre-line rs-leading-none`}>{userName}</div>
 
                 <AiOutlineLogout onClick={onLogOut} className={`${small === true ? "rs-hidden" : "rs-block"} rs-text-3xl rs-rounded rs-bg-slate-200 rs-p-2 rs-cursor-pointer`} />
 
