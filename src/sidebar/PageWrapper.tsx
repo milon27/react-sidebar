@@ -13,8 +13,10 @@ export default function PageWrapper({ children, className = 'rs-p-5' }: { childr
             <MobileSidebar />
             {/* content */}
             {/* rs-p-5 */}
-            <div className={`${className} rs-transition-all rs-w-full ${small === true ? "sm:rs-ml-[65px]" : "sm:rs-ml-[240px]"} `}>
-                {children}
+            <div className={`rs-transition-all rs-w-full ${small === true ? "sm:rs-pl-[65px]" : "sm:rs-pl-[240px]"} `}>
+                <div className={`rs-page-wrapper ${className}`}>
+                    {children}
+                </div>
             </div>
         </div>
     )

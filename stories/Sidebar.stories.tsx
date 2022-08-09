@@ -19,7 +19,9 @@ const Home = () => {
 
 const About = () => {
   return <PageWrapper>
-    About page
+    <div>
+      About page Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam porro, soluta eaque hic, quaerat, natus sunt unde dicta eius quos vel? Consequatur veritatis, quaerat molestiae quidem beatae dolores commodi! Eius. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque natus omnis illo aperiam deserunt magni aspernatur, autem error eius mollitia, amet ex inventore explicabo, placeat esse voluptates asperiores libero dolore?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum magnam in esse eveniet asperiores quia atque eos reprehenderit quo! Est qui labore error explicabo, aliquid quas ratione. Tenetur, at eligendi.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam adipisci voluptates dolore nesciunt, laboriosam ipsa provident blanditiis officia, maiores non modi, quo totam aperiam explicabo unde alias eius accusantium quia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit est inventore illo voluptates rerum aliquid a ullam suscipit adipisci nulla dicta architecto nesciunt qui aspernatur tempora, sit culpa doloribus! Eaque?
+    </div>
   </PageWrapper>
 }
 
