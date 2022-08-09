@@ -13,8 +13,6 @@ export default function LeftOffCanvas({ show, title, setShow, children }: iLeftO
     const hide_class = 'rs-offcanvas rs-offcanvas-end rs-fixed rs-bottom-0 rs-flex rs-flex-col rs-max-w-full rs-bg-white  rs-bg-clip-padding  rs-outline-none rs-transition -rs-translate-x-full rs-duration-300 rs-ease-in-out rs-text-gray-700 rs-top-0 rs-left-0 rs-border-none rs-w-64 md:rs-w-80 rs-shadow-xl rs-z-[1200]'
 
     const hide = () => {
-        console.log("here we gooo..");
-
         setShow(false)
     }
 
