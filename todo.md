@@ -78,6 +78,9 @@ export default defineConfig({
 # login
 npm login
 # publish
+git add .
+git commit -m 'something'
+git push origin main
 npm publish
 
 ```
