@@ -1,7 +1,7 @@
 {
   "name": "@milon27/react-sidebar",
   "private": false,
-  "version": "5.0.6",
+  "version": "5.0.7",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -26,7 +26,7 @@
     "preview": "vite preview",
     "husky:init": "pnpm exec husky init",
     "version:inc": "npm version patch --no-git-tag-version && git add .",
-    "prepare": "husky",
+    "prepare": "pnpm build",
     "push": "git push origin main && npm publish"
   },
   "dependencies": {
