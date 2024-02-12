@@ -10,13 +10,13 @@ npm install react-icons @milon27/react-sidebar
 
 ### How to use
 
-1. import css in main.js/ts or app.jsx or app.tsx.
+1. Import css in main.js/ts or app.jsx or app.tsx.
 
 ```ts
 import "../node_modules/@milon27/react-sidebar/dist/react-sidebar.css";
 ```
 
-2. customize main color with css variables
+2. Customize main color with css variables
 
 ```css
 /* if you are using tailwind */
@@ -36,7 +36,7 @@ import "../node_modules/@milon27/react-sidebar/dist/react-sidebar.css";
 }
 ```
 
-3. use the component
+3. Use the component
 
 > (React Js Project)
 
@@ -80,7 +80,7 @@ const App = () => {
         disableCollapse={false}
         hideBorder={false}
         // customHeader={
-        //   <>{/* replace logoUrl, Title With your own custom component */}</>
+        //   <>{/* Replace logoUrl, title With your own custom component */}</>
         // }
         // footer start
         userName="Milon27"
@@ -93,9 +93,9 @@ const App = () => {
         // }
         navItems={navItems}
         activeStyle="outline" // fill , outline
-        onLogOut={() => {}} // wont work on custom header
+        onLogOut={() => {}} // wont work on custom footer
         onLogoClick={() => {}} // wont work on custom header
-        onProfileImgClick={() => {}} // wont work on custom header
+        onProfileImgClick={() => {}} // wont work on custom footer
       >
         <BrowserRouter>
           <Routes>
@@ -151,28 +151,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <SidebarWrapper
-      // header props
-      logoUrl="https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_chrome-512.png"
-      title="Google"
-      disableCollapse={false}
-      hideBorder={false}
-      // customHeader={
-      //   <>{/* replace logoUrl, Title With your own custom component */}</>
-      // }
-      // footer start
-      userName="Milon27"
-      userImageUrl="https://avatars.githubusercontent.com/u/44096479?v=4"
-      // customFooter={
-      //   <div className="border w-full bg-black rounded-md flex text-white p-3 justify-between items-center">
-      //     <button>Logout</button>
-      //     <FiAirplay />
-      //   </div>
-      // }
-      navItems={navItems}
-      activeStyle="outline" // fill , outline
-      onLogOut={() => {}} // wont work on custom header
-      onLogoClick={() => {}} // wont work on custom header
-      onProfileImgClick={() => {}} // wont work on custom header
+    // ....
+    // same props as React JS example
     >
       <Component {...pageProps} />
     </SidebarWrapper>
@@ -200,7 +180,7 @@ export default function about() {
 
 > screenshot
 
-![screenshot](desktop1.png)
-![screenshot](desktop2.png)
-![screenshot](mobile1.png)
-![screenshot](mobile2.png)
+![screenshot](screenshot/desktop1.png)
+![screenshot](screenshot/desktop2.png)
+![screenshot](screenshot/mobile1.png)
+![screenshot](screenshot/mobile2.png)
