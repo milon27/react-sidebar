@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# it will thorw error and stop commit if there is any linting error, it will ignore warning
+npm run lint
