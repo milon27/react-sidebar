@@ -29,7 +29,7 @@ export default function Sidebar() {
           {logoUrl && (
             <img
               src={logoUrl}
-              className="rs-max-h-10 rs-cursor-pointer"
+              className="rs-h-10 rs-cursor-pointer rs-object-contain"
               alt=""
               onClick={onLogoClick}
             />

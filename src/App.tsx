@@ -40,9 +40,9 @@ export default function App() {
   return (
     <>
       <SidebarWrapper
-        logoUrl="https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_chrome-512.png"
-        // logoUrl="https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/2017/Google_Maps_Logo_2020-1024.png"
-        title="M27"
+        // logoUrl="https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_chrome-512.png"
+        // logoUrl="https://raw.githubusercontent.com/npm/logos/master/npm%20logo/npm-logo-red.png"
+        title="NPM_LOGO"
         disableCollapse={false}
         hideBorder={false}
         // customHeader={

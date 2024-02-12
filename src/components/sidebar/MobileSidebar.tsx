@@ -41,7 +41,7 @@ export default function MobileSidebar() {
 
   return (
     <>
-      <div className="rs-flex sm:rs-hidden rs-px-5 rs-py-2  rs-shadow">
+      <div className="rs-flex sm:rs-hidden rs-px-5 rs-py-2 rs-gap-2 rs-shadow">
         <div className="rs-flex rs-w-full rs-gap-2 rs-justify-start rs-items-center">
           <CgMenuLeft
             className="rs-text-3xl rs-cursor-pointer rs-text-gray"
@@ -50,13 +50,13 @@ export default function MobileSidebar() {
           {logoUrl && (
             <img
               src={logoUrl}
-              className="rs-w-9 rs-h-9 rs-max-w-full rs-rounded-full rs-cursor-pointer"
+              className="rs-h-8 rs-max-w-full rs-cursor-pointer rs-object-contain"
               alt=""
               onClick={onLogoClick}
             />
           )}
           {title && (
-            <h5 className="rs-text-main rs-mb-0 rs-leading-none rs-font-semibold rs-uppercase rs-text-2xl">
+            <h5 className="rs-text-main rs-mb-0 rs-leading-none rs-font-semibold rs-uppercase rs-text-xl">
               {title}
             </h5>
           )}
@@ -68,7 +68,7 @@ export default function MobileSidebar() {
           >
             <img
               src={userImageUrl}
-              className="rs-rounded-full rs-shadow rs-w-8 rs-h-8 rs-overflow-hidden rs-object-cover"
+              className="rs-rounded-full rs-shadow rs-w-8 rs-h-8 rs-overflow-hidden rs-object-contain"
               alt=""
             />
           </div>
