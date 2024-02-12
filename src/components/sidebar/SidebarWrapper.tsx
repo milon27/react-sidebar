@@ -2,60 +2,60 @@ import React, { createContext, useState } from "react";
 
 export const SideBarContext = createContext(
   {} as {
+    navItems: (() => JSX.Element)[];
     small: boolean;
-    activeStyle?: "fill" | "outline";
     setSmall: React.Dispatch<React.SetStateAction<boolean>>;
+    activeStyle?: "fill" | "outline";
     logoUrl?: string;
     title?: string;
     customHeader?: React.ReactNode;
     customFooter?: React.ReactNode;
-    userName: React.ReactNode;
-    userImageUrl: string;
+    userName?: React.ReactNode;
+    userImageUrl?: string;
     disableCollapse?: boolean;
     hideBorder?: boolean;
     mobileHeaderContent?: React.ReactNode;
-    navItems: (() => JSX.Element)[];
     onLogoClick?: () => void;
     onProfileImgClick?: () => void;
-    onLogOut: () => void;
+    onLogOut?: () => void;
   }
 );
 
 interface iSidebarWrapper {
+  navItems: (() => JSX.Element)[];
+  children: React.ReactNode;
   logoUrl?: string;
-  userName: React.ReactNode;
   customHeader?: React.ReactNode;
   customFooter?: React.ReactNode;
   title?: string;
-  userImageUrl: string;
+  userName?: React.ReactNode;
+  userImageUrl?: string;
   disableCollapse?: boolean;
   hideBorder?: boolean;
-  navItems: (() => JSX.Element)[];
-  children: React.ReactNode;
   activeStyle?: "fill" | "outline";
   mobileHeaderContent?: React.ReactNode;
   onLogoClick?: () => void;
   onProfileImgClick?: () => void;
-  onLogOut: () => void;
+  onLogOut?: () => void;
 }
 
 /**
  * @description wrape your react router using this sidebarbar wrapper or wrape all component in _App.tsx in next js application
  */
 export default function SidebarWrapper({
+  navItems,
+  children,
   title = undefined,
   logoUrl = undefined,
-  userName,
+  userName = undefined,
   customHeader = undefined,
   customFooter = undefined,
   disableCollapse = false,
   hideBorder = false,
-  userImageUrl,
+  userImageUrl = undefined,
   activeStyle = "fill",
-  children,
-  mobileHeaderContent,
-  navItems,
-  onLogOut,
+  mobileHeaderContent = undefined,
+  onLogOut = () => {},
   onProfileImgClick = () => {},
   onLogoClick = () => {},
 }: iSidebarWrapper) {

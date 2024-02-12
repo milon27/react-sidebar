@@ -26,9 +26,7 @@ export default function MobileSidebar() {
               onClick={() => setShow(true)}
             />
           </div>
-          <div className="rs-flex rs-flex-1 rs-border justify-end items-center rs-gap-2">
-            {mobileHeaderContent}
-          </div>
+          <div className="rs-flex-1">{mobileHeaderContent}</div>
         </div>
         <LeftOffCanvas title={title || "Options"} show={show} setShow={setShow}>
           <Navs />
@@ -62,16 +60,18 @@ export default function MobileSidebar() {
           )}
         </div>
         <div className="rs-flex justify-end items-center rs-gap-2">
-          <div
-            className="rs-w-9 rs-h-9 rs-cursor-pointer rs-flex rs-items-center"
-            onClick={onProfileImgClick}
-          >
-            <img
-              src={userImageUrl}
-              className="rs-rounded-full rs-shadow rs-w-8 rs-h-8 rs-overflow-hidden rs-object-contain"
-              alt=""
-            />
-          </div>
+          {userImageUrl && (
+            <div
+              className="rs-w-9 rs-h-9 rs-cursor-pointer rs-flex rs-items-center"
+              onClick={onProfileImgClick}
+            >
+              <img
+                src={userImageUrl}
+                className="rs-rounded-full rs-shadow rs-w-8 rs-h-8 rs-overflow-hidden rs-object-contain"
+                alt=""
+              />
+            </div>
+          )}
         </div>
       </div>
       <LeftOffCanvas title={title || "Options"} show={show} setShow={setShow}>

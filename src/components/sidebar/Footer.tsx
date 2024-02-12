@@ -24,24 +24,28 @@ export default function Footer() {
         customFooter
       ) : (
         <div className="rs-flex rs-gap-2 rs-justify-between rs-items-center">
-          <div
-            className={`rs-w-8 rs-h-8 rs-cursor-pointer`}
-            onClick={onProfileImgClick}
-          >
-            <img
-              src={userImageUrl}
-              className="rs-rounded-full rs-shadow rs-w-8 rs-h-8 rs-overflow-hidden rs-object-cover"
-              alt=""
-            />
-          </div>
+          {userImageUrl && (
+            <div
+              className={`rs-w-8 rs-h-8 rs-cursor-pointer`}
+              onClick={onProfileImgClick}
+            >
+              <img
+                src={userImageUrl}
+                className="rs-rounded-full rs-shadow rs-w-8 rs-h-8 rs-overflow-hidden rs-object-cover"
+                alt=""
+              />
+            </div>
+          )}
 
-          <div
-            className={`${
-              small === true ? "rs-hidden" : "rs-block"
-            } rs-whitespace-pre-line rs-leading-none`}
-          >
-            {userName}
-          </div>
+          {userName && (
+            <div
+              className={`${
+                small === true ? "rs-hidden" : "rs-block"
+              } rs-whitespace-pre-line rs-leading-none`}
+            >
+              {userName}
+            </div>
+          )}
 
           <AiOutlineLogout
             onClick={onLogOut}
