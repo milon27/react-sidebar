@@ -75,3 +75,5 @@ npm login
 npm publish
 
 ```
+
+https://github.com/milon27/vite-react-library-mode
