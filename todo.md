@@ -1,3 +1,9 @@
+# todo: features
+
+- light and dark mode
+
+# project setup
+
 - 1 create vite project
 
 - 1 vite.config.ts
@@ -75,5 +81,3 @@ npm login
 npm publish
 
 ```
-
-https://github.com/milon27/vite-react-library-mode

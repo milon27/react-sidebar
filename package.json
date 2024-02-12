@@ -1,5 +1,5 @@
 {
-  "name": "@milon27/react-sample",
+  "name": "@milon27/react-sidebar",
   "private": false,
   "version": "1.0.4",
   "type": "module",
@@ -15,23 +15,6 @@
     },
     "./package.json": "./package.json"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": {
-    "name": "milon27",
-    "email": "immilon27@gmail.com",
-    "url": "https://milon27.com"
-  },
-  "keywords": [
-    "typescript",
-    "react-sidebar",
-    "tailwind-sidebar",
-    "nextjs-sidebar",
-    "dashboard sidebar",
-    "modern sidebar",
-    "sidebar"
-  ],
   "engines": {
     "node": ">=10"
   },
@@ -43,30 +26,57 @@
     "preview": "vite preview",
     "prepare": "pnpm build"
   },
+  "dependencies": {
+    "react-icons": "5.0.1"
+  },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
   },
   "devDependencies": {
-    "@types/node": "^20.11.17",
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "@vitejs/plugin-react": "^4.2.1",
-    "autoprefixer": "^10.4.17",
-    "eslint": "^8.56.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "postcss": "^8.4.35",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.2.2",
-    "vite": "^5.1.0",
-    "vite-plugin-dts": "^3.7.2"
+    "@types/node": "20.11.17",
+    "@types/react": "18.2.55",
+    "@types/react-dom": "18.2.19",
+    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "@typescript-eslint/parser": "6.21.0",
+    "@vitejs/plugin-react": "4.2.1",
+    "autoprefixer": "10.4.17",
+    "eslint": "8.56.0",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-refresh": "0.4.5",
+    "postcss": "8.4.35",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.22.0",
+    "tailwindcss": "3.4.1",
+    "typescript": "5.2.2",
+    "vite": "5.1.0",
+    "vite-plugin-dts": "3.7.2"
   },
   "sideEffects": [
     "**/*.css"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "milon27",
+    "email": "immilon27@gmail.com",
+    "url": "https://milon27.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/milon27/react-sidebar"
+  },
+  "keywords": [
+    "typescript",
+    "react-sidebar",
+    "tailwind-sidebar",
+    "nextjs-sidebar",
+    "dashboard sidebar",
+    "modern sidebar",
+    "sidebar",
+    "milon27"
+  ],
+  "license": "MIT"
 }
