@@ -41,8 +41,14 @@ import "../node_modules/@milon27/react-sidebar/dist/react-sidebar.css";
 > (React Js Project)
 
 ```tsx
-import { FiBox, FiActivity, FiAirplay, FiAperture } from "react-icons/fi";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  FiBox,
+  FiActivity,
+  FiAirplay,
+  FiAperture,
+  FiList,
+} from "react-icons/fi";
+import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom";
 import {
   SidebarWrapper,
   PageWrapper,
@@ -105,11 +111,6 @@ const App = () => {
                 <PageWrapper className="bg-green">home page</PageWrapper>
               }
             />
-
-            <Route path="/list" element={<ListPage />} />
-            <Route path="/create" element={<CreateNewPage />} />
-            <Route path="/edit" element={<EditPage />} />
-
             <Route
               path="/about"
               element={<PageWrapper>about page</PageWrapper>}
