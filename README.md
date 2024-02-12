@@ -16,7 +16,27 @@ npm install react-icons @milon27/react-sidebar
 import "../node_modules/@milon27/react-sidebar/dist/react-sidebar.css";
 ```
 
-2. use the component
+2. customize main color with css variables
+
+```css
+/* if you are using tailwind */
+@layer base {
+  :root {
+    --color-main: 34, 197, 94; /* main color */
+    --color-main-foreground: 255, 255, 255; /*  main foreground color */
+    --color-text: 64, 79, 101; /*  text color */
+  }
+}
+
+/* if you are not using tailwind */
+:root {
+  --color-main: 34, 197, 94; /* main color */
+  --color-main-foreground: 255, 255, 255; /*  main foreground color */
+  --color-text: 64, 79, 101; /*  text color */
+}
+```
+
+3. use the component
 
 > (React Js Project)
 

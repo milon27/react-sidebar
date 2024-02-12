@@ -1,7 +1,7 @@
 {
   "name": "@milon27/react-sidebar",
   "private": false,
-  "version": "1.0.4",
+  "version": "5.0.0",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
